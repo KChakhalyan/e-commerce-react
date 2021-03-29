@@ -1,14 +1,14 @@
 import React from 'react';
 import {
 	AppBar,
-	ToolBar,
+	Toolbar,
 	IconButton,
 	Badge,
 	MenuItem,
 	Menu,
 	Typography,
 } from '@material-ui/core';
-import { ShoppingCard } from '@material-ui/icons';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import logo from '../../assets/commerce.png';
 import useStyles from './styles';
 
@@ -17,7 +17,7 @@ const Navbar = () => {
 	return (
 		<>
 			<AppBar position="fixed" className={classes.appBar} color="inherit">
-				<ToolBar>
+				<Toolbar>
 					<Typography variant="h6" className={classes.title} color="inherit">
 						<img
 							src={logo}
@@ -31,11 +31,11 @@ const Navbar = () => {
 					<div className={classes.button}>
 						<IconButton area-label="Show card items" color="inherit">
 							<Badge badgeContent={2} color="secondary">
-								<ShoppingCard />
+								<ShoppingCartIcon />
 							</Badge>
 						</IconButton>
 					</div>
-				</ToolBar>
+				</Toolbar>
 			</AppBar>
 		</>
 	);

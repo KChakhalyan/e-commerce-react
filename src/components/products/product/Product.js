@@ -22,17 +22,17 @@ const Product = ({ product }) => {
 					title={product.name}
 				/>
 				<CardContent>
-					<div className={classes.CardContent}>
+					<div className={classes.cardContent}>
 						<Typography variant="h5" gutterBottom>
 							{product.name}
 						</Typography>
 						<Typography variant="h5">{product.price}</Typography>
 					</div>
-					<Typography cariant="body2" coloor="textSecondary">
+					<Typography variant="body2" color="textSecondary">
 						{product.description}
 					</Typography>
 				</CardContent>
-				<CardActions disableSpacing className={classes.CardActions}>
+				<CardActions disableSpacing className={classes.cardActions}>
 					<IconButton area-label="Add to Card">
 						<AddShoppingCartIcon />
 					</IconButton>
