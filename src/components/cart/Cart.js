@@ -6,12 +6,12 @@ const Cart = ({ cart }) => {
 	const classes = useStyles();
 
 	const EmptyCart = () => {
-		<Typography varriant="subtitle1">
+		return(<Typography varriant="subtitle1">
 			You have no items in your shopping cart, start adding some!
-		</Typography>;
+		</Typography>)
 	};
 	const FilledCart = () => {
-		<>
+			return(<>
 			<Grid container spacing={3}>
 				{cart.line_items.map((item) => (
 					<Grid item xs={12} sm={4} key={item.id}>
@@ -44,7 +44,7 @@ const Cart = ({ cart }) => {
 					</Button>
 				</div>
 			</div>
-		</>;
+		</>)
 	};
 
 	if (!cart.line_items) return 'Loading ...';
